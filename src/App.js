@@ -17,7 +17,7 @@ function App() {
   });
 
   return (
-    <div>
+    <React.Fragment>
      {coins.map(coin => {
        return(
         <Coin
@@ -33,7 +33,7 @@ function App() {
        )
      })}  
 
-    </div>
+    </React.Fragment>
   );
 }
 

@@ -11,7 +11,7 @@ const Coin = ({ name, image, symbol, price, marketCap, priceChange, volume }) =>
         
         <tr>
             <td>
-                <img src={image} style={{width: '20px', height: '20px', marginRight: '10'}} />
+                <img src={image} style={{width: '20px', height: '20px', marginRight: '10px'}} />
                 <span style={{fontSize: '13px'}}><b>{name} </b></span>
                 <span style={{fontSize: '13px', color: '#808a9d'}}>{symbol.toUpperCase()}</span>
             </td>
