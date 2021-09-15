@@ -3,7 +3,7 @@ import React from 'react';
 const Coin = ({ name, image, symbol, price, marketCap, priceChangeDay, volume }) => {
     var priceChangeDayTag;
     if (priceChangeDay < 0)
-        priceChangeDayTag = <td style={{color: '#f00606', width: '12%' }}>{priceChangeDay.toFixed(2)}%</td>;
+        priceChangeDayTag = <td style={{color: '#f00606'}}>{priceChangeDay.toFixed(2)}%</td>;
     else
         priceChangeDayTag = <td style={{color: '#11d811' }}>{priceChangeDay.toFixed(2)}%</td>;
 
