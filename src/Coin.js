@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Coin = ({ name, image, symbol, price, marketCap, priceChange, volume }) => {
-    var priceChangeTag;
-    if (priceChange < 0)
-        priceChangeTag = <td style={{color: '#f00606', width: '12%' }}>{priceChange.toFixed(2)}%</td>;
+const Coin = ({ name, image, symbol, price, marketCap, priceChangeDay, volume }) => {
+    var priceChangeDayTag;
+    if (priceChangeDay < 0)
+        priceChangeDayTag = <td style={{color: '#f00606', width: '12%' }}>{priceChangeDay.toFixed(2)}%</td>;
     else
-        priceChangeTag = <td style={{color: '#11d811' }}>{priceChange.toFixed(2)}%</td>;
+        priceChangeDayTag = <td style={{color: '#11d811' }}>{priceChangeDay.toFixed(2)}%</td>;
 
     return (
         
@@ -15,7 +15,7 @@ const Coin = ({ name, image, symbol, price, marketCap, priceChange, volume }) =>
                 <span style={{fontSize: '13px'}}><b>{name} </b></span>
                 <span style={{fontSize: '13px', color: '#808a9d'}}>{symbol.toUpperCase()}</span>
             </td>
-            {priceChangeTag}
+            {priceChangeDayTag}
             <td>${price.toFixed(2)}</td>
             <td>${volume.toLocaleString()}</td>
             <td>${marketCap.toLocaleString()}</td>
