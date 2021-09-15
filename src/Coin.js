@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { useTable } from 'react-table';
 import { COLUMNS } from './components/columns';
+import './components/table.css';
 
 const Coin = ({ data }) => {
 
