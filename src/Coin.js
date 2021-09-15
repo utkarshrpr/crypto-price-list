@@ -3,19 +3,19 @@ import { useTable } from 'react-table';
 import { COLUMNS } from './components/columns';
 import './components/table.css';
 
-const Coin = ({ data }) => {
+const Coin = (props) => {
 
     // const tableColumns = useMemo(() => COLUMNS, []);
     // const tableData = useMemo(() => data, []);
     const tableColumns = COLUMNS;
-    const tableData = data;
-    console.log(tableData);
+    const tableData = props.data;
+    // console.log(props);
 
     const tableInstance = useTable({
         columns: tableColumns,
         data: tableData
     });
-
+    // console.log(tableInstance);
     const { getTableProps,
         getTableBodyProps,
         headerGroups,

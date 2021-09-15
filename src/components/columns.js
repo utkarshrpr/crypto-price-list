@@ -5,7 +5,14 @@ export const COLUMNS =[
     },
     {
         Header: 'Image',
-        accessor: 'image'
+        accessor: 'image',
+        Cell: tableProps => (
+            <img
+              src={tableProps.row.original.image}
+              width={20}
+              alt='Player'
+            />
+          )
     },
     {
         Header: 'Symbol',
