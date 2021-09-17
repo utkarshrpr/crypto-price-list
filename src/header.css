@@ -1,0 +1,10 @@
+#navHeading {
+    flex: 1;
+    font-size: 12px;
+    color: #808a9d;
+    text-align: center;
+}
+
+#navHeadingData {
+    color: rgb(56, 97, 251);
+}
