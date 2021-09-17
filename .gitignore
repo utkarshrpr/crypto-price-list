@@ -24,4 +24,3 @@ yarn-error.log*
 package-lock.json
 markets.json
 TrendingGrid.js
-App.js
