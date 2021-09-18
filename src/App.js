@@ -28,7 +28,8 @@ const App = () => {
     return (
         <>
             <Header />
-            <CoinTable coinList={allCoins}/>
+            <TrendingGrid trendingCoins={[...allCoins]} key='trendingCoinsGrid' />
+            <CoinTable coinList={allCoins} />
         </>
     )
 }

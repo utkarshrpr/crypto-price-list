@@ -21,7 +21,7 @@ const CoinRow = ({name, image, symbol, price, marketCap, priceChangeDay, volume}
             <td>${marketCap.toLocaleString()}</td>
         </tr>
 
-    )
+    );
 }
 
 export default CoinRow

@@ -6,7 +6,6 @@ function CoinTable({coinList}) {
   
   return (
     <>
-    {/* <TrendingGrid trendingCoins={allCoins.slice(0,9)} key='trendingCoinsGrid' /> */}
       <table>
         <thead>
           <tr>

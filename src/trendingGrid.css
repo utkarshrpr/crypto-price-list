@@ -1,0 +1,14 @@
+#trending-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+}
+
+#grid-card {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    box-shadow: 0px 4px 24px rgba(88, 102, 126, 0.08) 
+}
