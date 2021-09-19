@@ -1,10 +1,32 @@
-#navHeading {
+
+#navbar-list {
+    display: flex;
+    border-bottom: 1px solid rgb(239, 242, 245)
+}
+
+
+#navbar-list > span {
     flex: 1;
     font-size: 12px;
     color: #808a9d;
     text-align: center;
 }
 
-#navHeadingData {
+#navbar-list > span > a {
     color: rgb(56, 97, 251);
 }
+
+#header-logo {
+    width: 175px;
+    height: 30px;
+}
+
+#navbar-image {
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid rgb(239, 242, 245);
+    padding-top: 13px;
+    padding-bottom: 13px
+}
+
+
