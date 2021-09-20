@@ -11,7 +11,7 @@ class App extends React.Component {
         this.state = {
             allCoins: [],             
         }
-    }
+    } 
 
     getCoins = async () => {
         try {
@@ -31,10 +31,11 @@ class App extends React.Component {
     }
 
     render() {
+
         return (
             <>
                 <Header />
-                <TrendingGrid trendingCoins={[...this.state.allCoins]} />
+                <TrendingGrid trendingCoinsList={[...this.state.allCoins]} />
                 <CoinTable coinList={this.state.allCoins} />
             </>
         );
