@@ -5,7 +5,7 @@ import './trendingGrid.css';
 class TrendingGrid extends React.Component {
 
     render() {
-        var trendingCoins = [... this.props.trendingCoinsList];
+        var trendingCoins = [...this.props.trendingCoinsList];
        
         trendingCoins.sort(function (a, b) {
             return a.price_change_percentage_24h - b.price_change_percentage_24h;

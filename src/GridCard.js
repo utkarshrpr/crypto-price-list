@@ -6,7 +6,6 @@ class GridCard extends React.Component {
     render() {
         return (
             <>
-
                 <div id='grid-card'>
                     <div style={{ alignSelf: 'end', textAlign: 'right' }}><img src={this.props.logo} style={{ width: '15px', height: '15px' }} /></div>
                     <div style={{ alignSelf: 'end', paddingLeft: '10px' }}><b>{this.props.heading}</b></div>
