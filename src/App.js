@@ -1,37 +1,44 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import axios from 'axios';
 import Header from './Header';
 import TrendingGrid from './TrendingGrid';
 import CoinTable from './CoinTable';
 
-const App = () => {
+class App extends React.Component {
 
-    const [allCoins, setCoins] = useState([]);
+    constructor() {
+        super();
+        this.state = {
+            allCoins: [],             
+        }
+    }
 
-    const getCoins = async () => {
+    getCoins = async () => {
         try {
-            const resp = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false')
-            setCoins(resp.data);
+            let resp = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+            this.setState({ allCoins: resp.data });
         } catch (err) {
             console.error(err.message);
         }
-    };
+    }  
 
-    useEffect(() => {
-        getCoins();
+    componentDidMount() {
+        this.getCoins();
         const interval = setInterval(() => {
-            getCoins();
+            this.getCoins();
         }, 30000);
         return () => clearInterval(interval);
-    }, []);
+    }
 
-    return (
-        <>
-            <Header />
-            <TrendingGrid trendingCoins={[...allCoins]} key='trendingCoinsGrid' />
-            <CoinTable coinList={allCoins} />
-        </>
-    )
+    render() {
+        return (
+            <>
+                <Header />
+                <TrendingGrid trendingCoins={[...this.state.allCoins]} />
+                <CoinTable coinList={this.state.allCoins} />
+            </>
+        );
+    }
 }
 
 export default App
