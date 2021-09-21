@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect} from 'react';
 import axios from 'axios';
 import Header from './Header';
 import TrendingGrid from './TrendingGrid';
 import CoinTable from './CoinTable';
 import {useDispatch} from 'react-redux';
+import {apiCallAction} from './redux/actions/action';
 
 const App = () => {
 
@@ -12,7 +13,8 @@ const App = () => {
     const getCoins = async () => {
         try {
             const resp = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false')
-            dispatch({type: 'GET_COINS', payLoad: resp.data})
+            // dispatch({type: 'GET_COINS', payLoad: resp.data})
+            dispatch(apiCallAction(resp.data));
         } catch (err) {
             console.error(err.message);
         }

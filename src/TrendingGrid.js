@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 
 const TrendingGrid = () => {
 
-    const allCoins = useSelector((state) => state.allCoins)
+    const allCoins = useSelector((state) => state.allCoins);
     const trendingCoins = [...allCoins];
 
     trendingCoins.sort(function (a, b) {
