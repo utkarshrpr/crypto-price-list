@@ -4,12 +4,11 @@ const initialState = {
 }
 
 const reducer = (previousState = initialState, action) => {
-    const {type, payLoad} = action;
-    switch(type) {
+    // const {type, payLoad} = action;
+    switch(action.type) {
         case 'GET_COINS':
             return {
-                ...previousState,
-                allCoins: payLoad
+                allCoins: action.payLoad
             }
         default:
             return previousState

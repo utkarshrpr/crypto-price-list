@@ -1,8 +1,8 @@
 import React from 'react';
 import CoinRow from './CoinRow';
 import './coinTable.css';
-import store from './redux/store';
-import {connect} from 'react-redux';
+// import store from './redux/store';
+// import {connect} from 'react-redux';
 import {useSelector} from 'react-redux';
 
 function CoinTable() {
