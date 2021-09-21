@@ -1,7 +1,6 @@
-export const apiCallAction = (coins) => {
+export const apiCallAction = () => {
     return {
-        type: 'GET_COINS',
-        payLoad: coins
+        type: 'GET_COINS_REQUESTED'
     }
 }
 
