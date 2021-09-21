@@ -1,9 +1,13 @@
 import React from 'react';
 import CoinRow from './CoinRow';
 import './coinTable.css';
+import store from './redux/store';
+import {connect} from 'react-redux';
+import {useSelector} from 'react-redux';
 
-function CoinTable({coinList}) {
+function CoinTable() {
   
+  const allCoins = useSelector((state) => state.allCoins)
   return (
     <>
       <table>
@@ -17,7 +21,7 @@ function CoinTable({coinList}) {
           </tr>
         </thead>
         <tbody>
-          {coinList.map(oneCoin => {
+          {allCoins.map(oneCoin => {
             return (
               <CoinRow
                 key={oneCoin.id}

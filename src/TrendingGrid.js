@@ -1,8 +1,12 @@
 import React from 'react';
 import GridCard from './GridCard';
 import './trendingGrid.css';
+import {useSelector} from 'react-redux';
 
-const TrendingGrid = ({trendingCoins}) => {
+const TrendingGrid = () => {
+
+    const allCoins = useSelector((state) => state.allCoins)
+    const trendingCoins = [...allCoins];
 
     trendingCoins.sort(function (a, b) {
         return a.price_change_percentage_24h - b.price_change_percentage_24h;

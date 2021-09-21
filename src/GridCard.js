@@ -15,7 +15,7 @@ function GridCard({logo, heading, itemList}) {
                                 {index + 1}
                             </div>
                             <div style={{paddingLeft: '10px'}}>
-                            <img src={item.image} style={{width:'15px', height:'15px', marginRight: '2px'}} />
+                            <img alt ='' src={item.image} style={{width:'15px', height:'15px', marginRight: '2px'}} />
                             <span style={{fontSize: '12px'}}> <b>{item.name}</b></span>
                             <span style={{fontSize: '10px', color: '#808a9d'}}> {item.symbol.toUpperCase()}</span>
                             </div>
